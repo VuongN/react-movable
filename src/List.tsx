@@ -136,7 +136,8 @@ class List<Value = string> extends React.Component<IProps<Value>> {
     const isTouch = isTouchEvent(e);
     if (!isTouch && e.button !== 0) return;
     const index = this.getTargetIndex(e as any);
-    if (index === -1) return;
+    const item = this.props.values[index] as any;
+    if (item.index === -1 || item.disabled) return;
     const listItemTouched = this.getChildren()[index];
     const handle = listItemTouched.querySelector('[data-movable-handle]');
     if (handle && !handle.contains(e.target as any)) {

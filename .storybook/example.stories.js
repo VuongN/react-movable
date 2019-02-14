@@ -10,6 +10,7 @@ import LockVertically from '../examples/LockVertically';
 import VaryingHeights from '../examples/VaryingHeights';
 import ScrollingWindow from '../examples/ScrollingWindow';
 import ScrollingContainer from '../examples/ScrollingContainer';
+import DisabledItems from '../examples/DisabledItems';
 
 storiesOf('List', module)
   .add('Basic', () => <Basic />)
@@ -21,4 +22,5 @@ storiesOf('List', module)
   .add('Lock vertically', () => <LockVertically />)
   .add('Varying heights', () => <VaryingHeights />)
   .add('Scrolling window', () => <ScrollingWindow />)
-  .add('Scrolling container', () => <ScrollingContainer />);
+  .add('Scrolling container', () => <ScrollingContainer />)
+  .add('Disabled items', () => <DisabledItems />);
